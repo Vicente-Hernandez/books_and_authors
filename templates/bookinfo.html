@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="bg-dark">
+<body style="background: rgba(206,169,140,0.8)">
     <div class="container row>
         <div class=" img-fluid img-responsive background-repeat:no-repeat d-flex justify-content-center border
         border-dark border-5"
@@ -65,7 +65,7 @@
                 <div class="mask col-md-12 my-3 p-4 d-inline-block"
                     style="background-color: rgba(0,0,0,0.6); height:auto">
                     <h2 class="text-light my-4">Add an Author</h2>
-                    <form method="POST" action="/add_author" class="row justify-content-center my-5">
+                    <form method="POST" action="/book_add_author" class="row justify-content-center my-5">
                         {% csrf_token %}
                         <div class="col-auto">
                             <input class="form-control d-none" type="hide" value="{{book.id}}"
@@ -85,6 +85,7 @@
                         <div class="col-auto">
                             <input class="btn btn-dark btn-lg" type="submit" value="Add the new Author">
                         </div>
+                        <a class="mt-3 btn btn-outline-light" href="/books" role="button">Back to Books</a>
                     </form>
                 </div>
             </div>
